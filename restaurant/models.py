@@ -1,6 +1,6 @@
 from django.db import models
 from user.models import User
-
+from django_google_maps import fields as map_fields
 
 #class Restaurant(models.Model):
     #name = models.CharField(max_length=50)
@@ -57,7 +57,8 @@ class Restaurant(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     restaurant_name = models.CharField(max_length=150, db_index=True)
     slug = models.SlugField(max_length=150, db_index=True)
-    address = models.CharField(max_length=100, null = True)
+    address = map_fields.AddressField(max_length=200, null = True)
+    geolocation = map_fields.GeoLocationField(max_length=100, null = True)
     city = models.CharField(max_length=100, null = True)
     restaurant_phone_number = models.PositiveIntegerField()
     restaurant_email = models.EmailField(blank=True, null=True)
@@ -68,7 +69,6 @@ class Restaurant(models.Model):
     timings = models.IntegerField(choices=TIMING_CHOICES, default=MONDAY)
     opening_from = models.TimeField()
     opening_to = models.TimeField()
-    twitter_handle = models.CharField(max_length=80, blank=True, null=True)
     other_details = models.TextField()
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, null = True)

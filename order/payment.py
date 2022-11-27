@@ -12,18 +12,15 @@ stripe.api_key = settings.SECRET_KEY
 
 
 class GetPublishableKey(views.APIView):
-
     def get(self, request):
     	return response.Response(
             data={"publishable_key": settings.PUBLISHABLE_KEY},
         )
 
 class GetCheckoutSession(views.APIView):
-
     permission_classes = [permissions.AllowAny]
 
     def get(self, request):
-       
         id = request.GET.get('sessionId', '').strip()
         if not id:
             return response.Response(
@@ -36,7 +33,6 @@ class GetCheckoutSession(views.APIView):
         )
 
 class CreateCheckoutSession(views.APIView):
-
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
@@ -44,14 +40,10 @@ class CreateCheckoutSession(views.APIView):
             print('checkout_session response', request.data)
 
             user = request.data["user"]
-           
-
             domain_url = 'http://' + request.get_host().split(':')[0].lower()
             user = Order.objects.get(id=user)
-            
             registration_id = user.id
             registration_id = str(registration_id)
-            
             checkout_session = stripe.checkout.Session.create(
                 success_url=domain_url,
                 cancel_url=domain_url,
@@ -86,4 +78,7 @@ class CreateCheckoutSession(views.APIView):
             return response.Response(
                 {"error": str(e)}, status=status.HTTP_400_BAD_REQUEST
             )
+
+
+            
 

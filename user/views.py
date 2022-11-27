@@ -2,8 +2,9 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 import requests
+from rest_framework.views import APIView
 from user.models import User
-from user.serializers import CreateUserSerializer
+from user.serializers import CreateUserSerializer, LoginSerializer
 
 
 @api_view(['POST'])
@@ -91,3 +92,21 @@ def create_user(request, is_restaurant):
         res['user_role'] = 'restaurant'
         return Response(res)
     return Response(serializer.errors)
+
+
+class LoginView(APIView):
+    queryset = User.objects.all()
+    serializer_class = LoginSerializer
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+        if username is None or password is None:
+            return Response({'error': 'Please provide both username and password'})
+        user = authenticate(username=username, password=password)
+
+        if not user:
+            return Response({'error': 'Invalid Credentials'})
+        login(request, user)
+        token, li = Token.objects.get_or_create(user=user)
+
+        return Response({'token': token.key})
