@@ -1,9 +1,8 @@
 from rest_framework import viewsets, mixins
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-
 from food.models import Food, FoodCategory
-from restaurants.models import Restaurant
+from restaurant.models import Restaurant
 from food.serializers import FoodSerializer, FoodCategorySerializer
 
 

@@ -19,7 +19,9 @@ from food import urls as food_urls
 from restaurant import urls as restaurant_urls
 from user import urls as user_urls
 from order import urls as order_urls
+from payment import urls as payment_urls
 from DeliveryPartner import urls as DeliveryPartner_urls
+from Delivery import urls as Delivery_urls
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -27,11 +29,13 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('food', include(food_urls)),
-    path('restaurant', include(restaurant_urls)),
+    path('food/', include(food_urls)),
+    path('restaurant/', include(restaurant_urls)),
     path('', include(user_urls)),
-    path('order', include(order_urls)),
-    path('deliveryPartner', include(DeliveryPartner_urls)),
+    path('order/', include(order_urls)),
+    path('payment/', include(payment_urls)),
+    path('deliveryPartner/', include(DeliveryPartner_urls)),
+    path('delivery/', include(Delivery_urls)),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

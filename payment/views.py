@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from payment.models import Billing
+from payment.serializers import BillingSerializer
+from rest_framework import viewsets, mixins
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
-# Create your views here.
+class BillingViewSet(viewsets.ModelViewSet):
+    serializer_class = BillingSerializer
+    queryset = Billing.objects.all()

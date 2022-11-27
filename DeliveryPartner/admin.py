@@ -1,11 +1,11 @@
 from django.contrib import admin
 from DeliveryPartner.models import (
-    profile,
-    service,
-    task
+    Profile,
+    Service,
+    Task
 )
-admin.site.register(profile)
-admin.site.register(service)
-admin.site.register(task)
+admin.site.register(Profile)
+admin.site.register(Service)
+admin.site.register(Task)
 
 

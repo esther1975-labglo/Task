@@ -10,6 +10,7 @@ class FoodCategory(models.Model):
 
 class Food(models.Model):
     name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to = 'img', null = True)
     category = models.ForeignKey(
         FoodCategory, related_name="foods", on_delete=models.CASCADE)
     restaurant = models.ForeignKey(
