@@ -29,3 +29,4 @@ class Order(models.Model):
         total_price = self.quantity * self.food_items.price
         return total_price
     
+    
