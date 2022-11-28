@@ -11,15 +11,24 @@ from DeliveryPartner.serializers import (
 
 
 class ProfileViewSet(viewsets.ModelViewSet):
+    """
+    Delivery partner profile details
+    """
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
 
 class ServiceViewSet(viewsets.ModelViewSet):
+    """
+    service of the day in delivery
+    """
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
+    """
+    task of delivery parner
+    """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer

@@ -7,6 +7,11 @@ from food.serializers import FoodSerializer, FoodCategorySerializer
 
 
 class FoodCategoryViewSet(viewsets.ModelViewSet):
+
+    """
+    food categories of the hotel
+    """
+
     queryset = FoodCategory.objects.all()
     serializer_class = FoodCategorySerializer
 
@@ -39,6 +44,11 @@ class FoodCategoryViewSet(viewsets.ModelViewSet):
 
 
 class FoodViewSet(viewsets.ModelViewSet):
+
+    """
+    ddetails of the food
+    """
+
     queryset = Food.objects.all()
     serializer_class = FoodSerializer
 

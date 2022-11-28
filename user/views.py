@@ -10,18 +10,28 @@ from user.serializers import CreateUserSerializer, LoginSerializer
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_customer(request):
+    """
+    customer registration
+    """
     return create_user(request, False)
 
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_restaurant(request):
+    """
+    restaurant registration
+    """
     return create_user(request, True)
 
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def token(request):
+    """
+    token generation of registered user
+    """
+
     user = User.objects.filter(
         username__exact=request.data['username']).first()
     if user is None:
@@ -95,6 +105,10 @@ def create_user(request, is_restaurant):
 
 
 class LoginView(APIView):
+    """
+    user login 
+    """
+    
     queryset = User.objects.all()
     serializer_class = LoginSerializer
     def post(self, request):

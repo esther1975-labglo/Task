@@ -9,5 +9,8 @@ from Delivery.serializers import (
 
 
 class DeliveryViewSet(viewsets.ModelViewSet):
+    """
+    Delvery details 
+    """
     queryset = Delivery.objects.all()
     serializer_class = DeliverySerializer
