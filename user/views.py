@@ -3,7 +3,10 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 import requests
 from rest_framework.views import APIView
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
 from user.models import User
+from rest_framework.authtoken.models import Token
 from user.serializers import CreateUserSerializer, LoginSerializer
 
 
@@ -14,6 +17,7 @@ def register_customer(request):
     customer registration
     """
     return create_user(request, False)
+    #return Response(request, create_user, False)
 
 
 @api_view(['POST'])
@@ -90,7 +94,7 @@ def create_user(request, is_restaurant):
         serializer.save(
             email=request.data['email'], is_restaurant=is_restaurant)
         data = requests.post(
-            BASE_URL + 'token/',
+           
             data={
                 'grant_type': 'password',
                 'username': request.data['username'],
@@ -108,7 +112,7 @@ class LoginView(APIView):
     """
     user login 
     """
-    
+
     queryset = User.objects.all()
     serializer_class = LoginSerializer
     def post(self, request):

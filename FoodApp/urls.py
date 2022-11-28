@@ -22,6 +22,7 @@ from order import urls as order_urls
 from payment import urls as payment_urls
 from DeliveryPartner import urls as DeliveryPartner_urls
 from Delivery import urls as Delivery_urls
+from review import urls as review_urls
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -36,6 +37,6 @@ urlpatterns = [
     path('payment/', include(payment_urls)),
     path('deliveryPartner/', include(DeliveryPartner_urls)),
     path('delivery/', include(Delivery_urls)),
-
+    path('review/', include(review_urls)),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

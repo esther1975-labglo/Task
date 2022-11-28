@@ -18,7 +18,7 @@ class Order(models.Model):
     order_for = models.CharField(max_length=50, null=True)
     pickup_time = models.DateTimeField(default=timezone.now, blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    food_items = models.ForeignKey(Food, on_delete=models.CASCADE, blank=True, null=True)
+    food_items = models.ManyToManyField(Food)
     quantity = models.IntegerField(null = True)
     total = models.DecimalField(max_digits = 5, decimal_places = 2, null=True)
     instructions = models.TextField(max_length=100, blank=True, null=True)
