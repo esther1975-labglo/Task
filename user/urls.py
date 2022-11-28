@@ -12,7 +12,7 @@ from .views import (
 urlpatterns = [
     path('register/customer', register_customer),
     path('register/restaurant', register_restaurant),
-    path('login', LoginView.as_view()),
+    path('login/', LoginView.as_view()),
     path('token/', token),
     path('token/refresh/', refresh_token),
     path('token/revoke/', revoke_token),

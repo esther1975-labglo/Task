@@ -46,7 +46,7 @@ class FoodCategoryViewSet(viewsets.ModelViewSet):
 class FoodViewSet(viewsets.ModelViewSet):
 
     """
-    ddetails of the food
+    ddetails of the
     """
 
     queryset = Food.objects.all()

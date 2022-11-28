@@ -4,8 +4,7 @@ from restaurant.models import Restaurant
 
 class FoodCategory(models.Model):
     name = models.CharField(max_length=50)
-    restaurant = models.ForeignKey(
-        Restaurant, related_name="categories", on_delete=models.CASCADE)
+    
 
 
 class Food(models.Model):
@@ -20,3 +19,4 @@ class Food(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     is_veg = models.BooleanField()
     quantity = models.IntegerField(null = True)
+   

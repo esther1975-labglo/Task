@@ -56,6 +56,7 @@ class Restaurant(models.Model):
         )
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     restaurant_name = models.CharField(max_length=150, db_index=True)
+    image = models.ImageField(upload_to = 'img', null = True)
     slug = models.SlugField(max_length=150, db_index=True)
     address = map_fields.AddressField(max_length=200, null = True)
     geolocation = map_fields.GeoLocationField(max_length=100, null = True)

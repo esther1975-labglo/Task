@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'payment',
     'Delivery',
     'DeliveryPartner',
+    'review',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
