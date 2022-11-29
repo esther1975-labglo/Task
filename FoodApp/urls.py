@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#from django.conf.urls import url
 from food import urls as food_urls
 from restaurant import urls as restaurant_urls
 from user import urls as user_urls
@@ -32,11 +33,12 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('food/', include(food_urls)),
     path('restaurant/', include(restaurant_urls)),
-    path('', include(user_urls)),
+    path('user/', include(user_urls)),
     path('order/', include(order_urls)),
     path('payment/', include(payment_urls)),
     path('deliveryPartner/', include(DeliveryPartner_urls)),
     path('delivery/', include(Delivery_urls)),
     path('review/', include(review_urls)),
+    path('paypal/', include('paypal.standard.ipn.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

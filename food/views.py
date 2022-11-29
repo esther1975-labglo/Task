@@ -7,86 +7,73 @@ from food.serializers import FoodSerializer, FoodCategorySerializer
 
 
 class FoodCategoryViewSet(viewsets.ModelViewSet):
-
-    """
-    food categories of the hotel
-    """
-
     queryset = FoodCategory.objects.all()
     serializer_class = FoodCategorySerializer
 
-    def create(self, request, restaurant_pk=None, *args, **kwargs):
+    # def create(self, request,  *args, **kwargs):
 
-        if not request.user.is_restaurant:
-            return Response({'message': 'unauthorized'}, 401)
 
-        serializer = FoodCategorySerializer(data=request.data)
+    #     serializer = FoodCategorySerializer(data=request.data)
 
-        if not serializer.is_valid():
-            return Response(serializer.errors)
+    #     if not serializer.is_valid():
+    #         return Response(serializer.errors)
 
-        if restaurant_pk is None:
-            return Response({'message': 'restaurant required'})
+    #     # if restaurant_pk is None:
+    #     #     return Response({'message': 'restaurant required'})
 
-        restaurant = Restaurant.objects.get(pk=restaurant_pk)
+    #     restaurant = Restaurant.objects.get(pk=self.request.data['restaurant'])
 
-        serializer.save(restaurant=restaurant)
+    #     serializer.save(restaurant=restaurant)
 
-        return Response(serializer.data)
+    #     return Response(serializer.data)
 
-    def get_permissions(self):
-        if self.action == 'list' or self.action == 'retrieve':
-            permission_classes = [AllowAny]
-        else:
-            permission_classes = [IsAuthenticated]
+    # def get_permissions(self):
+    #     if self.action == 'list' or self.action == 'retrieve':
+    #         permission_classes = [AllowAny]
+    #     else:
+    #         permission_classes = [IsAuthenticated]
 
-        return [permission() for permission in permission_classes]
+    #     return [permission() for permission in permission_classes]
 
 
 class FoodViewSet(viewsets.ModelViewSet):
-
-    """
-    ddetails of the
-    """
-
     queryset = Food.objects.all()
     serializer_class = FoodSerializer
 
-    def list(self, request, category_pk=None, restaurant_pk=None):
-        if category_pk is not None and restaurant_pk is not None:
-            queryset = Food.objects.filter(
-                category_id=category_pk, restaurant_id=restaurant_pk)
-        elif restaurant_pk is not None and category_pk is None:
-            queryset = Food.objects.filter(restaurant_id=restaurant_pk)
-        else:
-            queryset = Food.objects.filter(category_id=category_pk)
+    # def list(self, request, category_pk=None, restaurant_pk=None):
+    #     if category_pk is not None and restaurant_pk is not None:
+    #         queryset = Food.objects.filter(
+    #             category_id=category_pk, restaurant_id=restaurant_pk)
+    #     elif restaurant_pk is not None and category_pk is None:
+    #         queryset = Food.objects.filter(restaurant_id=restaurant_pk)
+    #     else:
+    #         queryset = Food.objects.filter(category_id=category_pk)
 
-        serializer = FoodSerializer(queryset, many=True)
+    #     serializer = FoodSerializer(queryset, many=True)
 
-        return Response(serializer.data)
+    #     return Response(serializer.data)
 
-    def create(self, request, restaurant_pk=None, category_pk=None, *args, **kwargs):
+    # def create(self, request, *args, **kwargs):
 
-        if not request.user.is_restaurant:
-            return Response({'message': 'unauthorized'}, 401)
+        
+    #     serializer = FoodSerializer(data=request.data)
 
-        serializer = FoodSerializer(data=request.data)
+    #     if not serializer.is_valid():
+    #         return Response(serializer.errors)
 
-        if not serializer.is_valid():
-            return Response(serializer.errors)
+    #     foodCategory = FoodCategory.objects.get(
+    #         pk=request.data.['category'])
+    #     restaurant = Restaurant.objects.get(
+    #         pk=request.data.['restaurant'])
+    #     serializer.save(category=foodCategory, restaurant=restaurant)
 
-        foodCategory = FoodCategory.objects.get(
-            pk=category_pk)
-        restaurant = Restaurant.objects.get(
-            pk=restaurant_pk)
-        serializer.save(category=foodCategory, restaurant=restaurant)
+    #     return Response(serializer.data)
 
-        return Response(serializer.data)
+    # def get_permissions(self):
+    #     if self.action == 'list' or self.action == 'retrieve':
+    #         permission_classes = [AllowAny]
+    #     else:
+    #         permission_classes = [IsAuthenticated]
 
-    def get_permissions(self):
-        if self.action == 'list' or self.action == 'retrieve':
-            permission_classes = [AllowAny]
-        else:
-            permission_classes = [IsAuthenticated]
+    #     return [permission() for permission in permission_classes]
 
-        return [permission() for permission in permission_classes]
