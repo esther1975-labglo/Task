@@ -48,10 +48,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'django_google_maps'
+    'django_google_maps',
+    'paypal.standard.ipn',
 
     
 ]
+
+PAYPAL_RECEIVER_EMAIL = 'youremail@mail.com'
+
+PAYPAL_TEST = True
+
 
 GOOGLE_MAPS_API_KEY = True
 
