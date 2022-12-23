@@ -19,37 +19,37 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
 
 
-# def process_payment(request):
-#     order_id = request.session.get('order_id')
-#     order = get_object_or_404(Order, id=order_id)
-#     host = request.get_host()
+def process_payment(request):
+    order_id = request.session.get('order_id')
+    order = get_object_or_404(Order, id=order_id)
+    host = request.get_host()
 
-#     paypal_dict = {
-#         'business': settings.PAYPAL_RECEIVER_EMAIL,
-#         'amount': '%.2f' % order.total_cost().quantize(
-#             Decimal('.01')),
-#         'item_name': 'Order {}'.format(order.id),
-#         'invoice': str(order.id),
-#         'currency_code': 'USD',
-#         'notify_url':'http://{}{}'.format(host,
-#                                            reverse('paypal-ipn')),
-#         'return_url': 'http://{}{}'.format(host,
-#                                            reverse('payment_done')),
-#         'cancel_return': 'http://{}{}'.format(host,
-#                                               reverse('payment_cancelled')),
-#     }
+    paypal_dict = {
+        'business': settings.PAYPAL_RECEIVER_EMAIL,
+        'amount': '%.2f' % order.total_cost().quantize(
+            Decimal('.01')),
+        'item_name': 'Order {}'.format(order.id),
+        'invoice': str(order.id),
+        'currency_code': 'USD',
+        'notify_url':'http://{}{}'.format(host,
+                                           reverse('paypal-ipn')),
+        'return_url': 'http://{}{}'.format(host,
+                                           reverse('payment_done')),
+        'cancel_return': 'http://{}{}'.format(host,
+                                              reverse('payment_cancelled')),
+    }
 
-#     form = PayPalPaymentsForm(initial=paypal_dict)
-#     #return render(request, 'ecommerce_app/process_payment.html', {'order': order, 'form': form})
-#     data = {'order': order, 'form': form}
-#     return Response(data)
-
-
-# @csrf_exempt
-# def payment_done(request):
-#     return Response(request, 'payment done')
+    form = PayPalPaymentsForm(initial=paypal_dict)
+    #return render(request, 'ecommerce_app/process_payment.html', {'order': order, 'form': form})
+    data = {'order': order, 'form': form}
+    return Response(data)
 
 
-# @csrf_exempt
-# def payment_canceled(request):
-#     return Response(request, 'payment_cancelled')
+@csrf_exempt
+def payment_done(request):
+    return Response(request, 'payment done')
+
+
+@csrf_exempt
+def payment_canceled(request):
+    return Response(request, 'payment_cancelled')

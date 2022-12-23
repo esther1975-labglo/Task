@@ -2,11 +2,7 @@ from django.db import models
 from user.models import User
 from django_google_maps import fields as map_fields
 from django.db.models import JSONField
-#class Restaurant(models.Model):
-    #name = models.CharField(max_length=50)
-    #address = models.TextField()
-   # mobile_num  = models.IntegerField(null = True)
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
 
 class Restaurant(models.Model):
