@@ -10,7 +10,7 @@ class FoodSerializer(serializers.ModelSerializer):
     class Meta:
         model = Food
         fields = ('id', 'name', 'description', 'price',
-                  'active', 'is_veg', 'quantity')
+                  'active', 'is_veg', 'quantity', 'restaurant', 'category')
 
 
 class FoodCategorySerializer(serializers.ModelSerializer):
@@ -21,7 +21,7 @@ class FoodCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FoodCategory
-        fields = ('id', 'name', 'foods')
+        fields = ('id', 'name', 'foods')          
 
 
 

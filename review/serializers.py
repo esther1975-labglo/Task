@@ -16,3 +16,4 @@ class RestaurantReviewSerializer(serializers.ModelSerializer):
         fields = (
             'user', 'restaurant', 'comments'
             )
+
