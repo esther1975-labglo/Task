@@ -44,4 +44,15 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
             'created',
             'updated'
         )
-        
+
+class LocationSerializer(serializers.Serializer):
+    latitude = serializers.FloatField(read_only=True)
+    longitude = serializers.FloatField(read_only=True)
+
+
+# class  GeoLocationSerializer(serializers.ModelSerializer):
+#     location = LocationSerializer(many=True)
+
+#     class Meta:
+#         model = GeoLocation
+#         fields = ['date', 'location']       

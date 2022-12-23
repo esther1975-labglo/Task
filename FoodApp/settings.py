@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    #'suit',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'user',
     'order',
     'payment',
+    'blog',
     'Delivery',
     'DeliveryPartner',
     'review',
@@ -49,17 +53,40 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'django_google_maps',
-    'paypal.standard.ipn',
+    #'paypal.standard.ipn',
+    # 'oauth2_provider',
+    'social_django',
+    # 'rest_framework_social_oauth2',
+    # 'drf_social_oauth2',
+    'django.contrib.sites',
 
-    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+   
 ]
 
-PAYPAL_RECEIVER_EMAIL = 'youremail@mail.com'
+SITE_ID = 1
 
-PAYPAL_TEST = True
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '123',
+            'secret': '456',
+            'key': ''
+        }
+    }
+}
 
+PAYPAL_RECEIVER_EMAIL = 'user@mail.com'
 
-GOOGLE_MAPS_API_KEY = True
+# PAYPAL_TEST = True
+GOOGLE_MAPS_API_KEY = 'AIzaSyBcBgH6ejld8dKyBUmhy-fvwWfYcl4DOVI'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -81,7 +108,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+        'rest_framework_social_oauth2.authentication.SocialAuthentication'
     ],
+
 
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
@@ -90,6 +120,32 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
+AUTHENTICATION_BACKENDS = [
+# 'rest_framework_social_oauth2.backends.DjangoOAuth2',
+# 'custom_account.backends.DrfAuthBackend',
+# 'custom_account.backends.EmailBackend',
+'django.contrib.auth.backends.ModelBackend',
+# 'social_core.backends.facebook.FacebookAppOAuth2',
+# 'social_core.backends.facebook.FacebookOAuth2',
+# 'social_core.backends.github.GithubOAuth2',
+ # Needed to login by username in Django admin, regardless of `allauth`
+'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+'allauth.account.auth_backends.AuthenticationBackend',
+]
+# Facebook configuration
+SOCIAL_AUTH_FACEBOOK_KEY = ('424762231818988')
+SOCIAL_AUTH_FACEBOOK_SECRET = ('7ea506193526e3f8ecc7743579545e15')
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'http://localhost:3000/'
+
+# Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from Facebook.
+# Email is not sent by default, to get it, you must request the email permission.
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email'
+}
+SOCIAL_AUTH_USER_FIELDS = ['email', 'username', 'first_name', 'password']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -99,9 +155,35 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'FoodApp.urls'
+
+# SOCIAL_AUTH_FACEBOOK_KEY = int('FACEBOOK_APP_ID')
+# SOCIAL_AUTH_FACEBOOK_SECRET = str('FACEBOOK_SECRET_KEY')
+# SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+# # Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from facebook. Email is not sent by default, to get it, you must request the email permission:
+# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+# SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+# 'fields': 'id, name, email' }
+# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+# FACEBOOK_EXTENDED_PERMISSIONS = ['email']
+# SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
+# SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+# SOCIAL_AUTH_PIPELINE = (
+#     'social_core.pipeline.social_auth.social_details',
+#     'social_core.pipeline.social_auth.social_uid',
+#     'social_core.pipeline.social_auth.auth_allowed',
+#     'social_core.pipeline.social_auth.social_user',
+#     'social_core.pipeline.user.get_username',
+#     'social_core.pipeline.social_auth.associate_by_email',
+#     'social_core.pipeline.user.create_user',
+#     'social_core.pipeline.social_auth.associate_user',
+#     'social_core.pipeline.social_auth.load_extra_data',
+#     'social_core.pipeline.user.user_details',
+#      )
 
 TEMPLATES = [
     {
@@ -114,10 +196,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  
+                'social_django.context_processors.login_redirect',
+               
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'FoodApp.wsgi.application'
 
@@ -130,7 +216,7 @@ AUTH_USER_MODEL = 'user.User'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app',
+        'NAME': 'App',
         'HOST' : 'localhost',
         'PORT' : '3306',
         'USER' : 'root',
@@ -140,7 +226,11 @@ DATABASES = {
     
 }
 
-
+GRAPPELLI_ADMIN_TITLE = 'FoodApp'
+GRAPPELLI_SWITCH_USER = False
+GRAPPELLI_SWITCH_USER_ORIGINAL = False
+GRAPPELLI_SWITCH_USER_TARGET = False
+GRAPPELLI_CLEAN_INPUT_TYPES = False
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -187,3 +277,11 @@ MEDIA_ROOT = BASE_DIR/'img'
 
 PUBLISHABLE_KEY = 'pk_test_51M1j6ISB7x1JZs2NW14Fmbm3pRdJeOO3Kvxc4viaoCDLBbyRbxhTtGintMRhcSdPmcUTL9PkiTLU1X5FiUQY3CS300aHpM9kL3'
 SECRET_KEY = 'sk_test_51M1j6ISB7x1JZs2NUmAYlXrG5KuIcxQHsE2xHulr29lqKEcFVOCNpcJG0e95P6vF8AjaYaytfpamdOn3ERvuVwRE00MS5ShRNq'
+
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '985292215170699' 
+SOCIAL_AUTH_FACEBOOK_SECRET = '7b8483ff422109a7c17b3f7a03966bbf' 

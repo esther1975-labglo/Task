@@ -30,7 +30,13 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Oauth
+    # path('auth/', include('drf_social_oauth2.urls', namespace='drf')),
+   # path('oauth/', include('social_django.urls', namespace='social')),
+    path('grappelli/', include('grappelli.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('accounts/', include('allauth.urls')),
+    #path('api-oauth/', include('rest_framework_social_oauth2.urls')),
     path('food/', include(food_urls)),
     path('restaurant/', include(restaurant_urls)),
     path('user/', include(user_urls)),
@@ -39,6 +45,6 @@ urlpatterns = [
     path('deliveryPartner/', include(DeliveryPartner_urls)),
     path('delivery/', include(Delivery_urls)),
     path('review/', include(review_urls)),
-    path('paypal/', include('paypal.standard.ipn.urls'))
+    # path('paypal/', include('paypal.standard.ipn.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

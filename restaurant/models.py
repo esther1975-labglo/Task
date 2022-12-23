@@ -1,7 +1,7 @@
 from django.db import models
 from user.models import User
 from django_google_maps import fields as map_fields
-
+from django.db.models import JSONField
 #class Restaurant(models.Model):
     #name = models.CharField(max_length=50)
     #address = models.TextField()
@@ -66,14 +66,14 @@ class Restaurant(models.Model):
     owner_email = models.EmailField(blank=True, null=True)
     opening_status = models.IntegerField(choices=OPENING_STATUS, default=OPEN)
     email = models.EmailField()
-    features = models.IntegerField(choices=FEATURE_CHOICES, default=DINNER)
-    timings = models.IntegerField(choices=TIMING_CHOICES, default=MONDAY)
+    features = models.IntegerField(choices = FEATURE_CHOICES, default = DINNER)
+    timings = models.IntegerField(choices = TIMING_CHOICES, default = MONDAY)
     opening_from = models.TimeField()
     opening_to = models.TimeField()
     other_details = models.TextField()
-    available = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True, null = True)
-    updated = models.DateTimeField(auto_now=True)
+    available = models.BooleanField(default = True)
+    created = models.DateTimeField(auto_now_add = True, null = True)
+    updated = models.DateTimeField(auto_now = True)
 
 
     class Meta:
@@ -126,4 +126,18 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class From(models.Model):
+    district = models.CharField(max_length = 100)
+    geolocation = map_fields.GeoLocationField(max_length=100, null = True)
+
+class To(models.Model):
+    district = models.CharField(max_length = 100)
+    geolocation = map_fields.GeoLocationField(max_length=100, null = True)
+
+class distance(models.Model):
+    from_location = models.ForeignKey(From, on_delete=models.CASCADE, blank=True, null=True)
+    to_location = models.ForeignKey(To, on_delete=models.CASCADE, blank=True, null=True)
 

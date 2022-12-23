@@ -16,3 +16,5 @@ class Delivery(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, null = True)
     delivery_location = models.CharField(max_length = 50)
     status = models.CharField(max_length = 1, null = True, choices = STATUS_CHOICES)
+    class Meta:
+        ordering = ['user']

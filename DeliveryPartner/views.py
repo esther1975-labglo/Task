@@ -31,4 +31,6 @@ class TaskViewSet(viewsets.ModelViewSet):
     task of delivery parner
     """
     queryset = Task.objects.all()
-    serializer_class = TaskSerializer
+    serializer_class = TaskSerializer         
+    
+
