@@ -16,7 +16,7 @@ def register_customer(request):
     """
     customer registration
     """
-    return create_user(request, False)
+    return create_user(request, True)
     #return Response(request, create_user, False)
 
 
