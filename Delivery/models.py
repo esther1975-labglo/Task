@@ -18,3 +18,4 @@ class Delivery(models.Model):
     status = models.CharField(max_length = 1, null = True, choices = STATUS_CHOICES)
     class Meta:
         ordering = ['user']
+

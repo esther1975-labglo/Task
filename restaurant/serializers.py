@@ -18,7 +18,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
             'id', 'user', 'restaurant_name', 
             'slug', 'address', 'city', 
             'restaurant_phone_number', 'restaurant_email',
-            'owner_email', 'opening_status', 'email', 'features',
+            'owner_email', 'opening_status', 'features',
             'timings', 'opening_from', 'opening_to', 'other_details',
             'available', 'created', 'updated', 'categories'
             )

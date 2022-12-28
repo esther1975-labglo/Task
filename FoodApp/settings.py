@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -48,12 +48,13 @@ INSTALLED_APPS = [
     'Delivery',
     'DeliveryPartner',
     'review',
+    'CSV',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
     'django_google_maps',
     #'paypal.standard.ipn',
-    #'oauth2_provider',
+    'oauth2_provider',
     'social_django',
     # 'rest_framework_social_oauth2',
     # 'drf_social_oauth2',
@@ -63,6 +64,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+   
    
 ]
 
@@ -83,26 +85,23 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 PAYPAL_RECEIVER_EMAIL = 'user@mail.com'
-
 # PAYPAL_TEST = True
-GOOGLE_MAPS_API_KEY = 'AIzaSyBcBgH6ejld8dKyBUmhy-fvwWfYcl4DOVI'
+
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-#CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
   'http://localhost:8000',
-  #'http://127.0.0.1:8000/',
 )
 
+GOOGLE_MAPS_API_KEY = 'AIzaSyA7pBu62hhtJxHJUlBbn1kGhqdT-L8os-w'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 1,
      
     'DEFAULT_AUTHENTICATION_CLASSES': 
-    
     [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -111,12 +110,20 @@ REST_FRAMEWORK = {
         'rest_framework_social_oauth2.authentication.SocialAuthentication'
     ],
 
-
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
     
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    
+    'TEST_REQUEST_RENDERER_CLASSES': [
+        'rest_framework.renderers.MultiPartRenderer',
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.TemplateHTMLRenderer'
+    ]
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ],
 }
 
 AUTHENTICATION_BACKENDS = [
@@ -215,7 +222,7 @@ AUTH_USER_MODEL = 'user.User'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'App',
+        'NAME': 'A1',
         'HOST' : 'localhost',
         'PORT' : '3306',
         'USER' : 'root',
@@ -254,7 +261,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

@@ -24,9 +24,13 @@ from payment import urls as payment_urls
 from DeliveryPartner import urls as DeliveryPartner_urls
 from Delivery import urls as Delivery_urls
 from review import urls as review_urls
+from CSV import urls as CSV_urls
 from django.conf.urls.static import static
 from django.conf import settings
-
+# from rest_framework_simplejwt.views import (
+#     TokenObtainPairView,
+#     TokenRefreshView,
+# )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,6 +49,10 @@ urlpatterns = [
     path('deliveryPartner/', include(DeliveryPartner_urls)),
     path('delivery/', include(Delivery_urls)),
     path('review/', include(review_urls)),
+    path('csv/', include(CSV_urls)),
+
     # path('paypal/', include('paypal.standard.ipn.urls'))
+    # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

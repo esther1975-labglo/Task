@@ -1,0 +1,209 @@
+Inspection_Date,Permittee_Name,Permit_ID,Full_Address,Inspection_Purpose,Violation,Is_Critical,Short_Description,Violation_Comments,Violation Type,GeoLocation
+2022-12-28,BAKER MIDDLE SCHOOL Kitchen,28187,"5903 GROOM RD 
+BAKER, LA 70714",Routine/Renewal,true,false,PLUMBING/GREASE TRAP,3101 - Plumbing is not maintained. Hand sink leak,,POINT (-91.135034 30.583942)
+2022-12-28,CITY PORK ON PERKINS-BAR,9933616,"18143 PERKINS ROAD EAST 
+BATON ROUGE, LA",Routine/Renewal,,,,,,POINT (-91.025726 30.347298)
+2022-12-28,ELSIE'S PLATE AND PIE-BAR,3770833,"3153 GOVERNMENT STREET 
+BATON ROUGE, LA 70806",Routine/Renewal,,,,,,POINT (-91.155895 30.444139)
+2022-12-28,SUBWAY #10124 KITCHEN,58114,"127 W STATE ST 
+BATON ROUGE , LA 70802",Routine/Renewal,true,false,"PERMITS – VALID, POSTED",501.3 - A valid permit to operate is not posted in a conspicuous location.,,POINT (-91.177264 30.41812)
+2022-12-29,STERN GROUP HOME KITCHEN,5305956,"15626 CONFEDERATE AVE 
+BATON ROUGE, LA 70817",Routine/Renewal,,,,,,POINT (-91.010921 30.392535)
+2022-12-30,JONNEY SUSHI (RESTAURANT),9017003,"6401 BLUEBONNET BLVD STE 1032 
+BATON ROUGE, LA 70836",2nd Re-inspection,,,,,,POINT (-91.090328 30.39235)
+2022-12-31,T & T SMOKEHOUSE MEATS Kitchen,10558419,"360 MAIN STREET 
+BAKER, LA 70714",Opening,,,,,,POINT (-91.169916 30.578717)
+2023-01-01,PLAYA BOWLS,8466850,"660 ARLINGTON CREEK CENTRE BLVD STE 4B 
+BATON ROUGE, LA 70820",Routine/Renewal,,,,,,
+2023-01-02,SHERWOOD POBOY RESTAURANT,80918,"2627 S SHERWOOD FOREST BLVD 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,WALLS AND CEILINGS,3703.3 - Walls/ceilings or attached equipment are not clean.,Repeat,POINT (-91.055546 30.427636)
+2023-01-03,B-QUIK #1 grocery,58680,"9611 AIRLINE HWY 
+BATON ROUGE, LA 70815",Routine/Renewal,,,,,,POINT (-91.082009 30.433595)
+2023-01-04,AB Horn Community Home kitchen,9933348,"1306 MAIN ST 
+BATON ROUGE, LA 70802",Routine/Renewal,true,false,"HAND WASH SUPPLIES – CLEAN, ACCESSIBLE",3109.5 - Soap and/or paper towels are not provided for use at the hand wash lavatory.,COS,POINT (-91.175852 30.451779)
+2023-01-05,MR GATTI'S 164 RESTAURANT,3384,"5888 ESSEN LN 
+BATON ROUGE, LA 70810",Preliminary,,,,,,POINT (-91.10919 30.395742)
+2023-01-06,MI CUEVITA PLUS #2 MEAT MARKET,160910,"14890 OLD HAMMOND HWY 
+BATON ROUGE , LA 70816",Routine/Renewal,,,,,,POINT (-91.02077 30.453673)
+2023-01-07,SOUTHERN FLAVOR (MOBILE),9016048,"12114 OLD HAMMOND HWY 
+BATON ROUGE, LA 70816",Routine/Renewal,,,,,,POINT (-91.044909 30.44056)
+2023-01-08,DIXIE LANDIN - BLUE BAYOU LEMONADE 2-WAVEPOOL,143164,"18142 PERKINS RD 
+BATON ROUGE, LA 70810",Opening,,,,,,
+2023-01-09,INGA'S SUBS AND SALADS DELI,149455,"1750 BRIGHTSIDE  LN STE A 
+BATON ROUGE, LA 70820",Routine/Renewal,true,false,"HAND WASH SUPPLIES â€“ CLEAN, ACCESSIBLE",3109.1 - Hand wash lavatory is not accessible.,Repeat,POINT (-91.178387 30.387855)
+2023-01-10,SPECTRUM FITNESS CLUB INC KITCHEN,3713,"7069 PERKINS RD 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,SANITIZER TEST KIT,"2513 - A sanitizer test kit is not provided to accurately measure the concentration in mg/L or parts per million of sanitizing solution
+provided. 
+For bleach use a chlorine test strip to measure between 50 and 100ppm.",,POINT (-91.115868 30.399137)
+2023-01-11,EL CHARRITO EXPRESS TAQUERIA,10058146,"175 SHARP RD 
+BATON ROUGE, LA 70815",Opening,,,,,,POINT (-91.072097 30.455599)
+2023-01-12,SPROUTS FARMERS MARKET-DELI/KITCHEN,8329312,"4841 ROUZAN SQUARE AVE 
+BATON ROUGE, LA 70808",Routine/Renewal,,,,,,
+2023-01-13,TIM'S POBOY'S II Restaurant,50848,"2333 MONTERREY BLVD 
+BATON ROUGE, LA 70815",Routine/Renewal,true,false,WALLS AND CEILINGS,3703.4 - Walls/ceilings or attached equipment are not in good repair.,Repeat,POINT (-91.084795 30.471007)
+2023-01-14,UNCLE MO FOOD MART AND DELI DELI,155667,"5557 PLANK RD 
+BATON ROUGE , LA 70805",Routine/Renewal,true,false,FLOORS,3701.5 - Floors are not clean.,Repeat,POINT (-91.15297 30.500049)
+2023-01-15,RUFFINO'S ITALIAN RESTAURANT RESTAURANT,3470,"18811 HIGHLAND RD 
+BATON ROUGE, LA 70809",Routine/Renewal,true,false,PERSONAL CARE ITEMS,"3903 - Employeesâ€™ personal care items are stored where food equipment, utensils, linens, single service items or single use items may be contaminated.-CELL PHONES; KEYS; FOOD ITEMS",COS,POINT (-91.02158 30.352511)
+2023-01-16,CIRCLE K STORE #2706797 - SUBWAY,2662221,"15940 TIGER BEND RD 
+BATON ROUGE, LA 70817",2nd Re-inspection,true,true,FOOD SAFETY CERTIFICATION,305 - A current state food safety certificate is not held by the owner or a designated employee of the establishment.,Repeat,POINT (-91.007903 30.389637)
+2023-01-17,ROUGE DAIQUIRIS-kitchen,9438204,"3827 PLANK RD 
+BATON ROUGE, LA 70805",Follow-up,true,false,"PERMITS â€“ VALID, POSTED",501.2 - The permit is not valid due to nonpayment of fees/penalties. Owe $300.00,COS,POINT (-91.158691 30.483749)
+2023-01-18,CHRIS'S SPECIALTY FOODS,4325288,"3075 MILLERVILLE RD STE A 
+BATON ROUGE, LA 70816",Follow-up,true,false,"PERMITS â€“ VALID, POSTED",501.2 - The permit is not valid due to nonpayment of fees/penalties.,Repeat,POINT (-91.024438 30.432113)
+2023-01-19,COWBOY CHICKEN,2414724,"6555 SIEGEN LN STE 8 
+BATON ROUGE, LA 70809",Routine/Renewal,true,true,FOOD â€“ COLD HOLDING,"1309 - Food stored for cold-holding and service was not held at a temperature of 41 Â°F or below.
+Bottom cooler - 50F",COS,POINT (-91.061148 30.390318)
+2023-01-20,Capital Park Bar & Grill kitchen,9193002,"7132 FLORIDA BLVD 
+BATON ROUGE , LA 70806",Routine/Renewal,true,true,CROSS CONTAMINATION â€“ FOOD TO FOOD,"1705 - Raw animal food is not separated from ready to eat food, or is placed, stored or displayed above ready to eat food.",COS,POINT (-91.115776 30.45153)
+2023-01-21,MCDONALD'S Restaurant,87156,"2278 O'NEAL LN 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,"EQUIPMENT CONSTRUCTION, GOOD REPAIR",2101.1 - Non-food contact equipment is not maintained in good repair.excessive ice build-up in walk-in freezer,,POINT (-91.007553 30.436147)
+2023-01-22,MARY LEE DONUTS donut shop,63439,"13847 COURSEY BOULEVARD BLDG A SUITE 1 
+BATON ROUGE, LA 70816",Follow-up,true,false,OPENINGS,3505.1 - Openings are not protected against the entry of rodents or insects.-FRONT EXITING DOOR,Repeat,POINT (-91.023357 30.408258)
+2023-01-23,MARY LEE DONUTS Donut Shop,90916,"4592 S SHERWOOD FOREST BLVD 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,"PERMITS â€“ VALID, POSTED","501.3 - A valid permit to operate is not posted in a conspicuous location.
+Post the new permit 2021-2022",,POINT (-91.05162 30.411609)
+2023-01-24,SUBWAY 33230 RESTAURANT,34005,"9618 JEFFERSON HIGHWAY SUITE A 
+BATON ROUGE, LA 70809",Routine/Renewal,true,false,WALLS AND CEILINGS,3703.4 - Walls/ceilings or attached equipment are not in good repair. Ceiling tile above ice machine.,,POINT (-91.077434 30.410887)
+2023-01-25,The Learning Tree Academy KITCHEN,8466367,"2710 N Foster DR 
+Baton Rouge, LA 70805",Follow-up,true,false,"PERMITS â€“ VALID, POSTED",501.2 - The permit is not valid due to nonpayment of fees/penalties. Owe $112.50,,POINT (-91.140334 30.473089)
+2023-01-26,TONY'S SEAFOOD EXPRESS-MOBILE,9933064,"5215 PLANK RD 
+BATON ROUGE, LA 70805",Preliminary,,,,,,POINT (-91.154026 30.496968)
+2023-01-27,QUARTERS KITCHEN,74587,"4530 S SHERWOOD FOREST BLVD 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,FLOORS,3701.6 - Floor is not maintained in good repair.,Repeat,POINT (-91.05162 30.412082)
+2023-01-28,RIC SEELING DANCE STUDIO Bar,131532,"10778 N HARRELLS FERRY RD 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,FLOORS,3701.5 - Floors are not clean.,Repeat,POINT (-91.064018 30.433761)
+2023-01-29,BROTHERS FOOD MART # 138 DELI,82097,"4940 GROOM RD 
+BAKER, LA 70714",Routine/Renewal,,,,,,POINT (-91.14701 30.586786)
+2023-01-30,LA BOILERS SEAFOOD MRKT,64016,"9085 PERKINS RD 
+BATON ROUGE, LA 70810",Routine/Renewal,,,,,,POINT (-91.10227 30.384268)
+2023-01-31,MCDONALD'S,10501630,"5745 CREEK CENTRE DR 
+BATON ROUGE, LA 70820",Opening,,,,,,
+2023-02-01,LATINOS RESTAURANT,5305183,"457 N DONMOOR 
+BATON ROUGE, LA 70806",Routine/Renewal,true,false,"FOOD STORAGE – 6” OFF FLOOR, DRY, COVERED","1501.1 - Food is not stored in a clean, covered container.",Repeat,POINT (-91.118453 30.454335)
+2023-02-02,TACO BELL #34641,3868969,"11991 HOOPER RD 
+BATON ROUGE, LA 70818",Routine/Renewal,,,,,,POINT (-91.053846 30.547119)
+2023-02-03,EDEN PARK BRANCH LIBRARY - SUMMER FEEDING,10501917,"5131 GREENWELL SPRINGS RD 
+BATON ROUGE, LA 70806",Summer Feeding,,,,,,POINT (-91.1377 30.463368)
+2023-02-04,COUNTRY DAY SCHOOL OF BATON ROUGE DAYCARE KITCHEN,184947,"3131 CONGRESS BLVD 
+BATON ROUGE, LA 70808",Routine/Renewal,,,,,,POINT (-91.136229 30.414203)
+2023-02-05,SAM'S CLUB - DEMO ROOM,10501617,"10444 N MALL DR 
+BATON ROUGE, LA 70809",Opening,,,,,,POINT (-91.063694 30.379883)
+2023-02-06,SOLERA-RESTAURANT,8329426,"4205 PERKINS ROAD, SUITE 5 
+BATON ROUGE, LA 70808",Routine/Renewal,true,true,TOXIC STORAGE,"3903 - Chemicals are stored with/above food, equipment, utensils, linens, single-service or single use articles.",COS,POINT (-91.146622 30.417938)
+2023-02-07,ASIAN PEARL Restaurant,123607,"4641 MAIN ST 
+ZACHARY, LA 70791",Routine/Renewal,,,,,,POINT (-91.155182 30.648339)
+2023-02-08,REDLINE NUTRITION - KITCHEN,9768700,"12524 JEFFERSON HWY STE G 
+BATON ROUGE, LA 70816",Routine/Renewal,,,,,,POINT (-91.04431 30.394569)
+2023-02-09,ARZI'S RESTAURANT,2661530,"14409 WAX RD STE G 
+BATON ROUGE, LA 70818",Routine/Renewal,true,false,FLOORS,3701.5 - Floors are not clean.,COS,POINT (-91.027797 30.54312)
+2023-02-10,FAST STOP,9769017,"14343 GREENWELL SPRINGS RD 
+GREENWELL SPRINGS, LA 70739",Routine/Renewal,,,,,,
+2023-02-11,PJ'S COFFEE Restaurant,28245,"9430 JACKIE COCHRAN DR 
+BATON ROUGE, LA 70807",Complaint,,,,,,POINT (-91.156766 30.53271)
+2023-02-12,D'HEMECOURT GROUP HOME - KITCHEN,7248757,"10131 Grandeur DR 
+Baton Rouge, LA 70815",Routine/Renewal,,,,,,POINT (-91.075139 30.437835)
+2023-02-13,MISSIONARIES OF CHARITY kitchen,49424,"737 E BLVD BLVD 
+BATON ROUGE, LA 7.080",Routine/Renewal,,,,,,
+2023-02-14,SAVE MORE MARKET #4 GROCERY,83135,"1557 GARDERE LN 
+BATON ROUGE, LA 70820",Routine/Renewal,true,true,FOOD â€“ COLD HOLDING,1309 - Food stored for cold-holding and service was not held at a temperature of 41 Â°F or below.,COS,POINT (-91.126812 30.355683)
+2023-02-15,COMMUNITY MARKET KITCHEN,150977,"1535 GARDERE LN 
+BATON ROUGE, LA 70820",Routine/Renewal,true,false,"EQUIPMENT CONSTRUCTION, GOOD REPAIR","2103.3 - Utensils/food-contact surfaces are not finished to a smooth, easily cleanable surface.
+Freezer lid for fries, lid for flour container.",,POINT (-91.126574 30.35607)
+2023-02-16,GOT JUICE JUICE BAR,99710,"3043 PERKINS ROAD #2 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,"HAND WASH SUPPLIES â€“ CLEAN, ACCESSIBLE",3109.5 - Soap and/or paper towels are not provided for use at the hand wash lavatory.,,POINT (-91.157567 30.424238)
+2023-02-17,JAYLA FOOD MART  Deli,178808,"12256 JEFFERSON HWY 
+BATON ROUGE , LA 70816",Routine/Renewal,true,true,INSECT/RODENT CONTROL,3501 - Rodents are present in the establishment.,,POINT (-91.047527 30.395163)
+2023-02-18,COURTYARD BATON ROUGE BAR,3868586,"10307 N MALL DR 
+BATON ROUGE , LA 70809",Routine/Renewal,,,,,,POINT (-91.066207 30.379232)
+2023-02-19,CHURCH'S CHICKEN #1172 KITCHEN,56670,"5415 PLANK RD 
+BATON ROUGE, LA 70805",Follow-up,,,,,,POINT (-91.153383 30.498809)
+2023-02-20,ONE STOP GROCERY GROC,182486,"2601 FLORIDA BLVD 
+BATON ROUGE, LA 70802",Routine/Renewal,true,false,WALLS AND CEILINGS,"3703.1 - Walls and/or ceilings in the food preparation areas are not constructed of smooth, light colored, durable and easily cleanable materials.",Repeat,POINT (-91.161084 30.450127)
+2023-02-21,DIXIE MAID RESTAURANT,4789,"4769 MCCLELLAND DR 
+BATON ROUGE, LA 70805",Routine/Renewal,true,false,"TOILET ROOM â€“ CLEAN, RECEPTACLE, DOOR, LOCATED",3111.9 - A covered waste can is not provided in the ladies toilet room.,COS,POINT (-91.13501 30.494095)
+2023-02-22,Sno-man Snoballs II,3016852,"14666 TIGER BEND  RD 
+BATON ROUGE, LA 70817",Routine/Renewal,,,,,,POINT (-91.021338 30.391764)
+2023-02-23,SIDE STOP STORE Deli,49319,"10045 FLORIDA BLVD 
+BATON ROUGE, LA 70815",Routine/Renewal,true,false,"EQUIPMENT CONSTRUCTION, GOOD REPAIR",2101.1 - Non-food contact equipment is not maintained in good repair.,Repeat,POINT (-91.072808 30.456721)
+2023-02-24,DOLLAR GENERAL 0741 Grocery,108918,"14438 PLANK RD 
+BAKER, LA 70714",Routine/Renewal,true,false,FLOORS,"3701.5 - Floors are not clean.
+
+WATER POOLING ON FLOOR - KEEP FLOORS CLEAN & DRY",,POINT (-91.127273 30.577901)
+2023-02-25,BIG BOY SHOP N GEAUX GROCERY,3219872,"12110 OLD HAMMOND HWY 
+BATON ROUGE, LA 70816",Routine/Renewal,true,false,"HAND WASH SUPPLIES â€“ CLEAN, ACCESSIBLE",3109.1 - Front counter Hand wash lavatory is not accessible ( filled with products),,POINT (-91.044857 30.440576)
+2023-02-26,ARZI'S CAFE GREEK & LEBANESE-BAR,5305065,"20377 OLD SCENIC HWY STE 201 
+ZACHARY, LA 70791",Routine/Renewal,true,true,FOOD CONTACT EQUIPMENT AND UTENSILS CLEANED,2501 - Food contact surfaces and utensils are not clean to sight and touch. Fountain drink nozzels,COS,POINT (-91.193241 30.653019)
+2023-02-27,BIG BROTHERS MEAT MARKET #3 - MEAT MARKET,4027922,"12606 S CHOCTAW DR LOT 43 
+BATON ROUGE, LA 70815",Routine/Renewal,,,,,,POINT (-91.04258 30.472438)
+2023-02-28,SUPERMERCADO Y TAQUERIA GROCERY,91476,"6031 SIEGEN LN 
+BATON ROUGE, LA 70809",Routine/Renewal,true,false,FLOORS,"3701.1 - Floors are not smooth and easily cleanable.
+The floor inside the walk in freezer.",,POINT (-91.058411 30.394842)
+2023-03-01,LSU UNION MAIN KITCHEN MAIN DOWNSTAIRS KITCHEN,3196,"LSU CAMPUS 
+BATON ROUGE, LA 70803",Routine/Renewal,true,false,"FOOD STORAGE â€“ 6â€� OFF FLOOR, DRY, COVERED",1501.1 - Food is not stored in a covered container. Dry storage,COS,
+2023-03-02,JASMINE ON THE BAYOU KITCHEN,52212,"6010 JONES CREEK,  RD STE A 
+BATON ROUGE, LA 70817",Routine/Renewal,true,false,WALLS AND CEILINGS,3703.3 - Walls/ceilings or attached equipment are not clean.,,POINT (-91.017672 30.396783)
+2023-03-03,COSTCO WHOLESALE  SNACK BAR,83856,"10000 DAWNADELE AVENUE, BUILDING A 
+BATON ROUGE , LA 70809",Routine/Renewal,,,,,,POINT (-91.072863 30.418845)
+2023-03-04,STOP 7 INC.-GROCERY,3868875,"7234 AIRLINE HWY. 
+BATON ROUGE, LA 70805",Routine/Renewal,true,false,FLOORS,3701.5 - Floors are not clean.,,POINT (-91.117124 30.482542)
+2023-03-05,IZZO'S ILLEGAL BURRITO KITCHEN,3897,"4250 BURBANK DRIVE STE 111 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,THERMOMETER PROVIDED,1321.2 - An accurate ambient air temperature-measuring device is not provided.,,POINT (-91.175946 30.401343)
+2023-03-06,WAFFLE HOUSE,9123104,"855 S STARING LANE 
+BATON ROUGE, LA 70808",Routine/Renewal,true,true,FOOD â€“ COLD HOLDING,"1309 - Food stored for cold-holding and service was not held at a temperature of 41 Â°F or below.
+Grill cooler - fill all spaces so that cold air does not escape",COS,POINT (-91.116087 30.380044)
+2023-03-07,THE KOLACHE KITCHEN KITCHEN,86862,"7930 JEFFERSON HWY 
+BATON ROUGE, LA 70809",Routine/Renewal,true,false,PLUMBING/GREASE TRAP,3101 - Plumbing is not maintained. 3 compartment sink leak.,,POINT (-91.106372 30.42643)
+2023-03-08,MESTIZO RESTAURANT Bar,135576,"2323 S ACADIAN THRUWAY 
+BATON ROUGE, LA 70806",Routine/Renewal,,,,,,
+2023-03-09,SEROPS CAFE RESTAURANT,50338,"6301 PERKINS RD 
+BATON ROUGE, LA 70808",Routine/Renewal,,,,,,POINT (-91.123325 30.405263)
+2023-03-10,JAYLA'S LEARNING CENTER DAYCARE KITCHEN,82663,"2208 N SHERWOOD FOREST BLVD 
+BATON ROUGE, LA 70815",Routine/Renewal,,,,,,POINT (-91.058085 30.468427)
+2023-03-11,PBRC METABOLIC KITCHEN KITCHEN,3409,"6400 PERKINS RD 
+BATON ROUGE, LA 7.080",Routine/Renewal,,,,,,
+2023-03-12,ROUL'S DELI - RESTAURANT,8466115,"3327 HIGHLAND RD 
+BATON ROUGE, LA 70802",Opening,true,true,FOOD CONTACT EQUIPMENT AND UTENSILS CLEANED,2501 - Food contact surfaces and utensils are not clean to sight and touch. Ice machine,COS,POINT (-91.17649 30.417847)
+2023-03-13,TOKYO CAFE (BAR),3016822,"7584 BLUEBONNET BLVD SUITE A 
+BATON ROUGE, LA 70809",Routine/Renewal,true,true,FOOD CONTACT EQUIPMENT AND UTENSILS CLEANED,2501 - Food contact surfaces and utensils are not clean to sight and touch. Fountain nozzle.,Repeat,
+2023-03-14,ROUL'S DELI - RESTAURANT,8466115,"3327 HIGHLAND RD 
+BATON ROUGE, LA 70802",Opening,true,false,"FOOD STORAGE – 6” OFF FLOOR, DRY, COVERED",1501.4 - Food is not stored six (6) inches off the floor.,COS,POINT (-91.17649 30.417847)
+2023-03-15,PHAT BOYZ PIZZA KITCHEN,163269,"9186 GREENWELL SPRINGS RD 
+BATON ROUGE , LA 70814",Routine/Renewal,true,false,CLEAN EQUIPMENT/SINGLE SERVICE STORAGE,2517.3 - Clean equipment/utensils are not stored at least six (6) inches off the floor.,COS,POINT (-91.087723 30.484138)
+2023-03-16,MAVERICKS Q-n-BREW  Kitchen,10175618,"4434 WEST CENTRAL 
+ZACHARY, LA 70791",Routine/Renewal,true,false,"LABEL – PACK AT RETAIL, BULK FOODS, CONTAINERS",1107 -  Bulk containers are not properly labeled. A CONTAINER OF SUGAR,COS,POINT (-91.157222 30.64772)
+2023-03-17,ZIPPY'S DELI,74714,"3155 PERKINS RD 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,WALLS AND CEILINGS,3703.3 - Walls/ceilings or attached equipment are not clean.,Repeat,POINT (-91.156753 30.42352)
+2023-03-18,IDEAL MARKET #11-DELI,9595376,"9301 BURBANK 
+BATON ROUGE, LA 70820",Routine/Renewal,true,true,FOOD – HOT HOLDING,1307 - Food for hot holding and service was held at a temperature of less than 135°F.,COS,POINT (-91.126807 30.361699)
+2023-03-19,CITY PORK ON PERKINS-RESTAURANT,9933615,"18143 PERKINS ROAD EAST 
+BATON ROUGE, LA",Routine/Renewal,true,false,"WARE WASHING, AIR DRYING",2515.2 - Equipment and utensils are not air-dried. -STACKING FOOD PANS BEFORE COMPLETELY DRY,COS,POINT (-91.025726 30.347298)
+2023-03-20,HONG KONG RESTAURANT kitchen,177834,"20377 OLD SCENIC HWY #204 
+ZACHARY, LA 70791",Routine/Renewal,true,false,CLEAN EQUIPMENT/SINGLE SERVICE STORAGE,"2517.8 - Single use/single service articles are not stored as to eliminate exposure to splash, dust or contamination. Invert in use containers",,POINT (-91.193241 30.653019)
+2023-03-21,DEAD POET'S-BAR,4778028,"623 E BOYD STE A 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,MAINTENANCE EQUIPMENT,4119.2 - Mops are not hung and/or stored to facilitate air drying.,,POINT (-91.176223 30.399781)
+2023-03-22,MI CUEVITA PLUS  deli,59491,"1853 W MURIEL DR 
+BATON ROUGE, LA 70816",Routine/Renewal,true,true,FOOD – DATE MARKING,"1507 - Ready to eat, potentially hazardous food prepared on premises and held for more than 24 hours is not date marked.",COS,POINT (-91.060441 30.435282)
+2023-03-23,KRAB QUEENZ SEAFOOD & DAIQUIRIS,9768783,"5260 CORPORATE BLVD 
+BATON ROUGE, LA 70808",Routine/Renewal,true,false,"HAND WASH SUPPLIES – CLEAN, ACCESSIBLE",3109.5 - Soap and/or paper towels are not provided for use at the hand wash lavatory.,Repeat,POINT (-91.135553 30.424442)
+2023-03-24,PITA PIT Restaurant,159567,"3260 HIGHLAND RD 
+BATON ROUGE, LA 70802",Routine/Renewal,true,false,IN USE UTENSIL STORAGE,2519.2 - In use food utensils are not stored on a clean dry surface.,Repeat,POINT (-91.176489 30.41784)
+2023-03-25,STAGE ONE CATERING CATERER,28241,"13465 S HARRELLS FERRY RD 
+BATON ROUGE, LA 70816",Routine/Renewal,true,true,FOOD – DATE MARKING,"1507 - Ready to eat, potentially hazardous food prepared on premises and held for more than 24 hours is not date marked.",COS,POINT (-91.034266 30.431605)
+2023-03-26,RED ZEPPELIN PIZZA BAR,64801,"4395 PERKINS RD 
+BATON ROUGE, LA 70808",Routine/Renewal,true,true,FOOD CONTACT EQUIPMENT AND UTENSILS CLEANED,"2501 - Food contact surfaces and utensils are not clean to sight and touch. Fountain gun, tea nozzles.",COS,POINT (-91.144989 30.417219)
+2023-03-27,RZ1 (DELI),10175683,"14445 OLD HAMMOND HWY. 
+BATON ROUGE, LA 70816",Routine/Renewal,true,true,FOOD SAFETY CERTIFICATION,305 - A current state food safety certificate is not held by the owner or a designated employee of the establishment.,,POINT (-91.025073 30.451415)
+2023-03-28,J B BOILING (RESTAURANT),10260542,"3636 N SHERWOOD FOREST BLVD STE 200 A 
+BATON ROUGE, LA 70814",Routine/Renewal,true,false,SANITIZER TEST KIT,"2513 - A sanitizer test kit is not provided to accurately measure the concentration in mg/L or parts per million of sanitizing solution
+provided.",,
+2023-03-29,L'AUBERGE CASINO HOTEL High Limit,78001,"777 L'AUBERGE AVE 
+BATON ROUGE , LA 70820",Routine/Renewal,,,,,,POINT (-91.146601 30.343402)
+2023-03-30,PAPA JOHN'S PIZZA Restaurant,3189,"13365 COURSEY BLVD 
+BATON ROUGE, LA 70816",Routine/Renewal,,,,,,POINT (-91.030984 30.408665)
+2023-03-31,FAMILY DOLLAR STORE 749 Grocery,108282,"810 MAIN ST 
+BAKER, LA 70714",Routine/Renewal,true,false,"TOILET ROOM – CLEAN, RECEPTACLE, DOOR, LOCATED",3111.2 - Toilet facilities are not conveniently located and accessible at all times.,,POINT (-91.168985 30.583776)
+2023-04-01,LIT PIZZA,2662146,"3930 BURBANK DRIVE SUITE K 
+BATON ROUGE, LA 70808",Routine/Renewal,true,true,FOOD – DATE MARKING -TIME,"1507 - Ready-to-eat potentially hazardous food prepared on premises, and held under refrigeration, was not disposed of after 7 days. Items from the commissary have dates beyond 7 days. All items have been removed from the inventory. Pizza sauce 4/19, marinara sauce 4/12, sensation salad dressing 10/8/21",COS,POINT (-91.179772 30.402992)
+2023-04-02,FRENCH CONNECTION SANDWICH KITCHEN Restaurant,3457,"12114 OLD HAMMOND HWY 
+BATON ROUGE, LA 70816",Routine/Renewal,true,true,FOOD – DATE MARKING,"1507 - Ready to eat, potentially hazardous food prepared on premises and held for more than 24 hours is not date marked.",Repeat,POINT (-91.044909 30.44056)
