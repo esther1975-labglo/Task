@@ -28,3 +28,4 @@ class MyCustomInlineModelOptions(GrappelliSortableHiddenMixin, admin.TabularInli
     fields = ("user",)
     sortable_field_name = "order"
     
+
