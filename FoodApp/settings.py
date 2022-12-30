@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
-    #'suit',
     'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,36 +52,21 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'django_google_maps',
-    #'paypal.standard.ipn',
     'oauth2_provider',
     'social_django',
-    # 'rest_framework_social_oauth2',
-    # 'drf_social_oauth2',
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-   
-   
+    # 'rest_framework_social_oauth2',
+    # 'drf_social_oauth2',
+    #'paypal.standard.ipn',
 ]
 
 SITE_ID = 1
 
-# Provider specific settings
-SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': ''
-        }
-    }
-}
+
 
 PAYPAL_RECEIVER_EMAIL = 'user@mail.com'
 # PAYPAL_TEST = True
@@ -126,20 +110,34 @@ REST_FRAMEWORK = {
     # ],
 }
 
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '123',
+            'secret': '456',
+            'key': ''
+        }
+    }
+}
+
 AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 # 'rest_framework_social_oauth2.backends.DjangoOAuth2',
 # 'custom_account.backends.DrfAuthBackend',
 # 'custom_account.backends.EmailBackend',
-'django.contrib.auth.backends.ModelBackend',
+# `allauth` specific authentication methods, such as login by e-mail
 # 'social_core.backends.facebook.FacebookAppOAuth2',
 # 'social_core.backends.facebook.FacebookOAuth2',
 # 'social_core.backends.github.GithubOAuth2',
- # Needed to login by username in Django admin, regardless of `allauth`
-'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-'allauth.account.auth_backends.AuthenticationBackend',
+# Needed to login by username in Django admin, regardless of `allauth`
 ]
+
 # Facebook configuration
 SOCIAL_AUTH_FACEBOOK_KEY = ('424762231818988')
 SOCIAL_AUTH_FACEBOOK_SECRET = ('7ea506193526e3f8ecc7743579545e15')
@@ -166,30 +164,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'FoodApp.urls'
 
-# SOCIAL_AUTH_FACEBOOK_KEY = int('FACEBOOK_APP_ID')
-# SOCIAL_AUTH_FACEBOOK_SECRET = str('FACEBOOK_SECRET_KEY')
-# SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
-
-# # Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from facebook. Email is not sent by default, to get it, you must request the email permission:
-# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
-# SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-# 'fields': 'id, name, email' }
-# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
-# FACEBOOK_EXTENDED_PERMISSIONS = ['email']
-# SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
-# SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
-# SOCIAL_AUTH_PIPELINE = (
-#     'social_core.pipeline.social_auth.social_details',
-#     'social_core.pipeline.social_auth.social_uid',
-#     'social_core.pipeline.social_auth.auth_allowed',
-#     'social_core.pipeline.social_auth.social_user',
-#     'social_core.pipeline.user.get_username',
-#     'social_core.pipeline.social_auth.associate_by_email',
-#     'social_core.pipeline.user.create_user',
-#     'social_core.pipeline.social_auth.associate_user',
-#     'social_core.pipeline.social_auth.load_extra_data',
-#     'social_core.pipeline.user.user_details',
-#      )
 
 TEMPLATES = [
     {
